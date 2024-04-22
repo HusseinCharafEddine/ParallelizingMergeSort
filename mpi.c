@@ -63,7 +63,7 @@ void mergeSortedSubarrays(int *arr, int num_elements, int num_procs)
     for (int i = 0; i < num_procs; i++)
     {
         merge(arr, i * subarray_size, (i + 1) * subarray_size - 1, num_elements - 1);
-        printf("%d \n", i);
+        // printf("%d \n", i);
     }
     merge(arr, 0, num_elements / 2, num_elements);
 }
